@@ -12,3 +12,20 @@ function menu_load(name, options) {
   catch (error) { console.log('menu_load - ' + error); }
 }
 
+/**
+ * Given a menu JSON object from menu_load(), this will extract the 'tree' items
+ * from the menu, and return them as JSON obect items in an array.
+ */
+function services_menu_tree(menu) {
+  try {
+    var items = [];
+    $.each(menu.tree, function(name, menu_item) {
+        var item = menu_item.link;
+        items.push(item);
+    });
+    if (items.length == 0) { items = null; }
+    return items;
+  }
+  catch (error) { console.log('services_menu_tree - ' + error); }
+}
+
