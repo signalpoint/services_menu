@@ -1,5 +1,6 @@
 /**
  * Load a menu, given the menu name.
+ * @TODO - this should be renamed to services_menu_load().
  */
 function menu_load(name, options) {
   try {
