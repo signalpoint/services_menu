@@ -22,7 +22,7 @@ Example Usage
 =============
 
 ```
-menu_load('menu-my-custom-menu', {
+services_menu_load('menu-my-custom-menu', {
   success: function(results) {
     console.log(results);
   }
