@@ -1,8 +1,7 @@
 /**
  * Load a menu, given the menu name.
- * @TODO - this should be renamed to services_menu_load().
  */
-function menu_load(name, options) {
+function services_menu_load(name, options) {
   try {
     options.method = 'GET';
     options.path = 'menu/' + encodeURIComponent(name) + '.json';
@@ -10,7 +9,7 @@ function menu_load(name, options) {
     options.resource = 'retrieve';
     Drupal.services.call(options);
   }
-  catch (error) { console.log('menu_load - ' + error); }
+  catch (error) { console.log('services_menu_load - ' + error); }
 }
 
 /**
